@@ -17,12 +17,12 @@ The validation example url is:
 
 or in repl:
 
-    2> credit_card:type("4019100110000006").
-    visa
+    2> emv:type("4019100110000006").
+    inn_visa
 
 and Result:
 
-    {visa,"4019100110000000",true}
+    {inn_visa,"4019100110000000",true}
 
 Credits
 -------
