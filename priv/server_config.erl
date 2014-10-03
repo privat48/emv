@@ -2,7 +2,7 @@
   {server_name, "localhost"},
   {server_root, "."},
   {document_root, "."},
-  {erl_script_alias, {"", [credit_card_server]}},
+  {erl_script_alias, {"", [emv_server]}},
   {modules, [mod_esi]},
   {mime_types,[
    {"html","text/html"},

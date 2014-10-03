@@ -8,12 +8,12 @@ can be found in config/server_config.erl
 
 To start the server use:
 
-    rebar get-deps
-    make server
+    mad com bun emv
+    ./emv
 
 The validation example url is:
 
-    http://localhost:8800/credit_card_server:validate?4019100110000006
+    http://localhost:8800/emv_server:validate?4019100110000006
 
 or in repl:
 
