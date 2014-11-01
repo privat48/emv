@@ -26,6 +26,14 @@ sum_digits(List, Acc) ->
     [Even|Remainder] = Tail,
     sum_digits(Remainder, Acc + digital_root(Even * 2) + Odd).
 
+card_check(Numbers) ->
+    lists:foldl(fun(X,Acc) -> Acc + X end,0,
+          lists:map(fun({A,Pos}) when Pos rem 2 == 0 -> list_to_integer([A]);
+                       ({A,Pos}) -> case list_to_integer([A]) * 2 of
+                                         X when X >= 10 -> X rem 10 + X div 10;
+                                         X -> X end
+    end, lists:zip(Numbers,lists:seq(1,length(Numbers))))) rem 10 == 0.
+
 digital_root(N) -> 1 + (N-1) rem 9.
 list_to_integers(N) -> lists:map(fun(E) -> list_to_integer([E]) end, N).
 
